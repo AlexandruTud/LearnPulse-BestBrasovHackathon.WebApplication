@@ -29,6 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## WEB APP
 
+![WhatsApp Image 2023-12-10 at 11 04 19](https://github.com/AlexandruTud/LearnPulse-BestBrasovHackathon.WebApplication/assets/95827917/9877802a-1b7e-41df-beb1-7dafbb8430c2)
+
+
 <img width="1440" alt="Screenshot 2023-12-11 at 14 40 12" src="https://github.com/AlexandruTud/LearnPulse-BestBrasovHackathon.WebApplication/assets/95827917/c53e6b55-03c3-4de7-9ece-6e769da30bac">
 <img width="1440" alt="Screenshot 2023-12-11 at 14 38 31" src="https://github.com/AlexandruTud/LearnPulse-BestBrasovHackathon.WebApplication/assets/95827917/72fbf223-2895-4530-8b63-b8015ff78461">
 <img width="1440" alt="Screenshot 2023-12-11 at 14 40 01" src="https://github.com/AlexandruTud/LearnPulse-BestBrasovHackathon.WebApplication/assets/95827917/3fd33bfa-68a4-4f73-b2d8-bf6750eb2252">
