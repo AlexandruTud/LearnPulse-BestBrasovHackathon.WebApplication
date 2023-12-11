@@ -1,0 +1,143 @@
+@media (max-width: 740px) {
+  * {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  * {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 390px) {
+  * {
+    font-size: 45%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Stiluri pentru bara de navigare transparentă */
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  padding: 15px 0px;
+  background-color: #034866;
+  transition: background-color 0.3s ease;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.nav-links {
+  display: flex;
+  column-gap: 20px;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.nav-links li a {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.nav-links li a:hover {
+  color: #2cbcfa;
+}
+
+.nav-colored {
+  background-color: #034866;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  height: 35px;
+}
+
+.search {
+  width: 250px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0px 40px;
+  color: white;
+  border: 1px solid #034866;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: black;
+  height: 30px;
+  letter-spacing: 1px;
+}
+
+.search button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #034866;
+  height: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+}
+
+@media screen and (max-width: 1168px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    background-color: #034866;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    color: white;
+  }
+}

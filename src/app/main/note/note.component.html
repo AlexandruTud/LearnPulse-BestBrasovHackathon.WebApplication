@@ -1,0 +1,19 @@
+<li class="note">
+  <div class="details">
+    <p>{{ note.noteTitle }}</p>
+    <span>{{ note.noteText }} </span>
+  </div>
+  <div class="bottom-content">
+    <div class="action-btn">
+      <button (click)="editOrDelete('edit' + note.idUser)">
+        <i class="fas fa-edit"> Edit</i>
+      </button>
+      <button
+        (click)="editOrDelete('delete' + note.idUser)"
+        style="margin-left: 12px"
+      >
+        <i class="fas fa-trash"> Delete</i>
+      </button>
+    </div>
+  </div>
+</li>

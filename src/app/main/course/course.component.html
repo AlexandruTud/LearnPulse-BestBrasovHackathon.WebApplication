@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="circle">
+    <span class="number">{{ course.difficulty }}</span>
+  </div>
+  <div class="card-image">
+    <img src="assets/1.jpg" />
+  </div>
+  <div class="card-content2">
+    <h3>{{ course.courseTitle }}</h3>
+    <p id="Genre">{{ course.categoryName }}</p>
+    <div class="card-content">
+      <p id="free" class="free">{{ getPublicText() }}</p>
+      <p id="long" class="free">{{ course.duration }} hours</p>
+      <button class="btn" id="readMoreBtn" (click)="goToCourse()">
+        View Course
+      </button>
+    </div>
+  </div>
+</div>

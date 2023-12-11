@@ -1,0 +1,63 @@
+<div class="container-area">
+  <div class="box">
+    <h2>Create your account</h2>
+    <form [formGroup]="validateForm">
+      <div class="inputBox">
+        <input
+          formControlName="firstName"
+          type="first-name"
+          id="first-name"
+          required
+        />
+        <label><i class="fa fa-user"></i> First Name</label>
+      </div>
+      <div class="inputBox">
+        <input
+          formControlName="lastName"
+          type="last-name"
+          id="last-name"
+          required
+        />
+        <label><i class="fa fa-user"></i> Last Name</label>
+      </div>
+      <div class="inputBox">
+        <input formControlName="email" type="text" id="email" required />
+        <label><i class="fa fa-envelope"></i> Email</label>
+      </div>
+      <div class="inputBox">
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          required
+        />
+        <label><i class="fa fa-lock"></i> Password</label>
+      </div>
+      <div class="inputBox">
+        <input
+          formControlName="confirmPassword"
+          type="password"
+          id="confirmpassword"
+          required
+        />
+        <label><i class="fa fa-lock"></i> Repeat your password</label>
+      </div>
+      <div class="inputBox">
+        <select name="gender" id="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div id="error-message" class="error-message"></div>
+      <input
+        [disabled]="!validForm()"
+        type="submit"
+        name="register"
+        value="Register"
+        id="register"
+        (click)="submit()"
+      />
+      <a class="forgot-password" (click)="goToLogin()">Already a user?</a>
+    </form>
+  </div>
+</div>

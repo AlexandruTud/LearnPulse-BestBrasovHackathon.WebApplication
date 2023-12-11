@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>FrontEnd</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link rel="icon" href="./icons8-user-90.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <app-root></app-root>
+    <script>
+      function returnScore() {
+        var totalQuestions = 5;
+        var score = 0;
+        var allQuestionsAnswered = true;
+
+        for (var i = 0; i < totalQuestions; i++) {
+          var questionName = "question" + i;
+          var selectedAnswer = document.querySelector(
+            'input[name="' + questionName + '"]:checked'
+          );
+
+          if (selectedAnswer) {
+            var userAnswer = selectedAnswer.value;
+
+            var correctAnswers = ["A", "A", "A", "A", "A"];
+
+            if (userAnswer === correctAnswers[i]) {
+              score += 1;
+            }
+          } else {
+            allQuestionsAnswered = false;
+          }
+        }
+
+        var resultDiv = document.getElementById("result");
+
+        if (allQuestionsAnswered) {
+          var scorePercentage = (score / totalQuestions) * 100;
+          resultDiv.innerHTML =
+            "Your score: " +
+            score +
+            "/" +
+            totalQuestions +
+            " (" +
+            scorePercentage +
+            "%)";
+        } else {
+          resultDiv.innerHTML =
+            "Please answer all questions before viewing results.";
+        }
+      }
+    </script>
+  </body>
+</html>

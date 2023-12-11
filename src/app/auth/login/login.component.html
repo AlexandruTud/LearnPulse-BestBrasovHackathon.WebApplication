@@ -1,0 +1,30 @@
+<div class="container-area">
+  <div class="box">
+    <h2>Welcome back</h2>
+    <form [formGroup]="validateForm">
+      <div class="inputBox">
+        <input formControlName="email" type="text" id="email" required />
+        <label><i class="fa fa-envelope"></i> Email</label>
+      </div>
+      <div class="inputBox">
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          required
+        />
+        <label><i class="fa fa-lock"></i> Password</label>
+      </div>
+      <div id="error-message" class="error-message"></div>
+      <input
+        [disabled]="!validForm()"
+        type="submit"
+        name="login"
+        value="Login"
+        id="login"
+        (click)="submit()"
+      />
+      <a class="forgot-password" (click)="goToRegister()">Not a user yet?</a>
+    </form>
+  </div>
+</div>

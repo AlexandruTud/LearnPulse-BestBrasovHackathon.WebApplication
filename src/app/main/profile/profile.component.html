@@ -1,0 +1,63 @@
+<section id="main">
+  <div class="apply">
+    <h2>APPLY NOW</h2>
+    <button class="apply-btn" id="student" (click)="verifyAccount(2)">
+      Apply for Student
+    </button>
+    <button class="apply-btn" id="teacher" (click)="verifyAccount(3)">
+      Apply for Teacher
+    </button>
+  </div>
+  <div class="profile">
+    <img src="assets/1.jpg" alt="Profile Picture" />
+    <div class="info">
+      <h1>{{ lastName }} {{ firstName }}</h1>
+      <p>
+        <span id="email">{{ email }}</span>
+      </p>
+      <p>Gender: <span id="gender">Male</span></p>
+      <p>
+        Your role is: <span id="role">{{ getRole() }}</span>
+      </p>
+      <div class="stats">
+        <p>YOUR POINTS: <span id="points">250</span></p>
+      </div>
+    </div>
+    <div class="actions">
+      <a
+        ><button class="sign-out" id="sign-out" (click)="signOut()">
+          Sign Out
+        </button></a
+      >
+    </div>
+  </div>
+  <div id="kaurukavideo">
+    <div class="course-container">
+      <div class="card">
+        <div class="image">
+          <img src="assets/silver.png" alt="Kaurukavideo" />
+          <p class="badge-text">3 COURSES BADGE</p>
+          <p class="achived" style="color: green">You achived this badge.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="assets/bronze.png" alt="Kaurukavideo" />
+          <p class="badge-text">5 COURSES BADGE</p>
+          <p class="achived" style="color: red">
+            You didn't achive this badge.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="assets/gold.png" alt="Kaurukavideo" />
+          <p class="badge-text">10 COURSES BADGE</p>
+          <p class="achived" style="color: red">
+            You didn't achive this badge.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

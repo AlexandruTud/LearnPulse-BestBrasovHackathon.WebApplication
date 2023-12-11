@@ -1,0 +1,35 @@
+<nav>
+  <div class="logo">
+    <a (click)="goToHome()"><img src="assets/logo.png" alt="logo" /></a>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a (click)="goToTeacherPage()" [hidden]="hideTeacherPage"
+        >Teacher's page</a
+      >
+    </li>
+    <li><a (click)="goToCourses()">Courses</a></li>
+    <li><a (click)="goToLeaderboard()">Leaderboard</a></li>
+    <li><a (click)="goToQuizzes()">Quizzes</a></li>
+    <li><a (click)="goToNotes()">Notes</a></li>
+    <li><a (click)="goToProfile()" [hidden]="hideProfile">Profile</a></li>
+  </ul>
+
+  <div class="search">
+    <input
+      type="text"
+      placeholder="Search Course"
+      (input)="search($event)"
+      id="search_input"
+    />
+    <button><i class="fas fa-search"></i></button>
+  </div>
+  <div class="burger-menu">&#9776;</div>
+</nav>
+
+<script>
+  document.querySelector(".burger-menu").addEventListener("click", function () {
+    var navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+  });
+</script>

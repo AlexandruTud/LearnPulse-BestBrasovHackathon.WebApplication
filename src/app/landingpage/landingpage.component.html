@@ -1,0 +1,240 @@
+<div class="background">
+  <header id="header" class="menu-container">
+    <div class="logo-box">
+      <img
+        src="assets/learnpulse-high-resolution-logo-black-transparent.png"
+        height="48"
+        alt="Logo"
+        (click)="goToHome()"
+      />
+    </div>
+    <nav id="nav-bar">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="nav-icon"></span
+      ></label>
+      <ul class="menu">
+        <li>
+          <a class="nav-link" (click)="goToCourses()" style="cursor: pointer"
+            >Courses</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" (click)="goToQuizzes()" style="cursor: pointer"
+            >Quizzes</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" (click)="goToNotes()" style="cursor: pointer"
+            >Notes</a
+          >
+        </li>
+        <div class="login-signup">
+          <li>
+            <a
+              id="login"
+              class="nav-link"
+              (click)="goToLogin()"
+              style="cursor: pointer;"
+              [hidden]="hideSignIn"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a
+              id="signup"
+              class="nav-link"
+              (click)="goToRegister()"
+              style="cursor: pointer"
+              [hidden]="hideSignIn"
+              >Sign Up</a
+            >
+          </li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero container">
+      <h1 class="hero-title-primary">
+        Unleashing Knowledge, One Heartbeat at a Time
+      </h1>
+      <p class="hero-title-sub">
+        Explore a Range of Quality Online Courses for FREE.
+      </p>
+
+      <button>
+        <a style="text-decoration: none" (click)="goToRegister()"
+          >Try For Free</a
+        >
+      </button>
+    </section>
+    <div class="hero-image">
+      <figure width="500px">
+        <img
+          src="assets/learnpulse.png"
+          id="hero-image"
+          alt="Hero Image"
+          width="500"
+          style="margin-top: 130px"
+        />
+      </figure>
+    </div>
+  </main>
+
+  <div>
+    <svg
+      class="waves"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+      shape-rendering="auto"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        />
+      </defs>
+      <g class="parallax">
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="0"
+          fill="rgba(255,255,255,0.7)"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="3"
+          fill="rgba(255,255,255,0.5)"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="5"
+          fill="rgba(255,255,255,0.3)"
+        />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+    </svg>
+  </div>
+
+  <section class="content" id="content">
+    <div class="inner-content">
+      <div class="inner-content-text content__TextLeft">
+        <div id="about" class="inter-content-subtitle">About</div>
+
+        <div class="inner-content-title">
+          Unleashing Knowledge, One Heartbeat at a Time
+        </div>
+
+        <div class="inner-content-para">
+          <p>
+            Embark on a journey with LearnPulse, a platform dedicated to the
+            pursuit of knowledge. Our mission is to empower curious minds with
+            limitless learning opportunities. At LearnPulse, we believe in the
+            transformative power of education, and we strive to provide you with
+            a unique space where knowledge flows freely.
+          </p>
+        </div>
+      </div>
+
+      <div class="inner-image-container container__ImageRight">
+        <div class="inner-content-image content__ImageRight">
+          <img
+            class="section-images"
+            src="assets/1.jpg"
+            style="object-position: 50% 50%; border-radius: 40px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="inner-content">
+      <div class="inner-content-text content__TextRight">
+        <div id="features" class="inter-content-subtitle">Features</div>
+
+        <div class="inner-content-title">
+          Elevate Your Learning Journey with LearnPulse
+        </div>
+
+        <div class="inner-content-para">
+          <p>
+            Discover the richness of LearnPulse, your gateway to an expansive
+            world of knowledge. Our platform offers a diverse range of courses
+            delivered in text, images, audio, and video formats, ensuring a
+            tailored learning experience for every user. Immerse yourself in a
+            vibrant community, explore courses from various sources, and embrace
+            a unique learning adventure with LearnPulse.
+          </p>
+        </div>
+      </div>
+
+      <div class="inner-image-container container__ImageLeft">
+        <div class="inner-content-image content__ImageLeft">
+          <img
+            class="section-images"
+            src="assets/2.jpg"
+            style="object-position: 50% 50%; border-radius: 40px"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="footer">
+  <div class="heading">
+    <h2>LearnPulse<sup>™</sup></h2>
+  </div>
+  <div class="content">
+    <div class="services">
+      <h4>Services</h4>
+      <p><a href="#">Explore Free Courses</a></p>
+      <p><a href="#">Discover Premium Courses</a></p>
+      <p><a href="#">Browse All Courses</a></p>
+      <p><a href="#">Customize Learning Paths</a></p>
+    </div>
+
+    <div class="social-media">
+      <h4>Social</h4>
+      <p>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      </p>
+      <p>
+        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      </p>
+      <p>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <div class="links">
+      <h4>Quick links</h4>
+      <p>
+        <a href="#"><i class="fas fa-angle-right"></i> Terms and Conditions</a>
+      </p>
+      <p>
+        <a href="#"><i class="fas fa-angle-right"></i> FAQ</a>
+      </p>
+      <p>
+        <a href="#"><i class="fas fa-angle-right"></i> Contact</a>
+      </p>
+    </div>
+    <div class="details">
+      <h4 class="address">Address</h4>
+      <p>
+        Constanta , Romania <br />
+        Bul Ferdinand 120 Bloc MTTC
+      </p>
+      <h4 class="mail">Email</h4>
+      <p><a href="#">HlLkz&#64;example.com</a></p>
+    </div>
+  </div>
+  <footer>
+    <hr />
+    © 2023 LearnPulse. All rights reserved.
+  </footer>
+</div>

@@ -1,0 +1,108 @@
+<div class="container-area">
+  <div id="kaurukavideo" style="margin-top: 100px">
+    <div class="lazy-v" data-embed="" style="z-index: 1" style="margin-top: 100px;">
+      <div class="play">
+        <span></span>
+      </div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ua-CiDNNj30?si=t2x35SejPQ61zE6H"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="course-container">
+      <div class="course-title">
+        <h1>{{ course.courseTitle }}</h1>
+      </div>
+      <div class="category">
+        <h3 id="category">{{ course.categoryName }}</h3>
+      </div>
+      <div class="course-description">
+        <p>
+          {{ course.description }}
+        </p>
+      </div>
+
+      <div class="stats">
+        <p>{{ course.duration }} hours</p>
+        <p>{{ course.courseLanguage }}</p>
+        <p>{{ getPublic() }}</p>
+        <p>{{ course.difficulty }}</p>
+        <p>{{ course.points }} Points</p>
+      </div>
+
+      <div class="comments">
+        <h3>Comments</h3>
+        <div class="comment-input">
+          <textarea
+            type="text"
+            placeholder="Write a comment..."
+            (keyup)="getTextArea($event)"
+          ></textarea>
+        </div>
+        <div class="tooltip">
+          ?
+          <span class="tooltip-text"
+            >Vă rugăm să aveți în vedere că limbajul licențios sau ofensator va
+            fi eliminat.</span
+          >
+        </div>
+
+        <div id="star_rating">
+          <span
+            class="star"
+            id="star_1"
+            (click)="rate(1)"
+            style="cursor: pointer"
+            >&#9733;</span
+          >
+          <span
+            class="star"
+            id="star_2"
+            (click)="rate(2)"
+            style="cursor: pointer"
+            >&#9733;</span
+          >
+          <span
+            class="star"
+            id="star_3"
+            (click)="rate(3)"
+            style="cursor: pointer"
+            >&#9733;</span
+          >
+          <span
+            class="star"
+            id="star_4"
+            (click)="rate(4)"
+            style="cursor: pointer"
+            >&#9733;</span
+          >
+          <span
+            class="star"
+            id="star_5"
+            (click)="rate(5)"
+            style="cursor: pointer"
+            >&#9733;</span
+          >
+        </div>
+        <button class="btn-submit" (click)="postComment()">
+          Post your comment
+        </button>
+
+        <div id="alert_message"></div>
+      </div>
+
+      <div id="output_container" class="comment_container">
+        <app-comment
+          *ngFor="let mycomment of comments; index as i"
+          [mycomment]="mycomment"
+        ></app-comment>
+        <div id="comment_count">{{ comments.length }} comments</div>
+      </div>
+    </div>
+  </div>
+</div>

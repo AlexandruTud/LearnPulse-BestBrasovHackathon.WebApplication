@@ -1,0 +1,172 @@
+<section
+  id="presentationn"
+  style="height: 60vh; background: linear-gradient(to right, #f2f2f2, #d9d9d9)"
+>
+  <div class="container1" id="presentation-container">
+    <h1 id="presentation-title">Welcome to LearnPulse</h1>
+    <p id="presentation-description">
+      Unlock the world of knowledge with our diverse range of high-quality
+      courses.
+    </p>
+    <a href="#main" id="explore-button">Explore Courses</a>
+    <div class="heart-rate">
+      <svg
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="150px"
+        height="73px"
+        viewBox="0 0 150 73"
+        enable-background="new 0 0 150 73"
+        xml:space="preserve"
+      >
+        <polyline
+          fill="none"
+          stroke="#009B9E"
+          stroke-width="3"
+          stroke-miterlimit="10"
+          points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486"
+        />
+      </svg>
+      <div class="fade-in"></div>
+      <div class="fade-out"></div>
+    </div>
+  </div>
+</section>
+
+<section id="main">
+  <div class="card3">
+    <button class="btn3"><i class="fas fa-code"></i> Programming</button>
+    <button class="btn3"><i class="fas fa-briefcase"></i> Business</button>
+    <button class="btn3"><i class="fas fa-palette"></i> Design</button>
+    <button class="btn3"><i class="fas fa-language"></i> Language</button>
+    <button class="btn3"><i class="fas fa-flask"></i> Science</button>
+    <button class="btn3"><i class="fas fa-cogs"></i> Engineering</button>
+    <button class="btn3">
+      <i class="fas fa-chart-bar"></i> Data Analytics
+    </button>
+    <button class="btn3"><i class="fas fa-server"></i> Architecture</button>
+  </div>
+
+  <div class="card-container" id="cards">
+    <app-course
+      *ngFor="let course of display_courses; index as i"
+      [course]="course"
+    ></app-course>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="header-container2" style="margin-bottom: 20px">
+    <div class="headings">
+      <h1 class="showcase-heading2">FROM OUR USERS</h1>
+      <h1 class="showcase-heading">Reviews</h1>
+    </div>
+  </div>
+  <div class="card-container2" style="padding: 20px">
+    <div class="cardReview">
+      <div class="card-image2">
+        <img src="assets/1.jpg" alt="Review Image" />
+      </div>
+      <div id="review">
+        <h3 style="color: #034866">Mihai Ion</h3>
+        <p>This is the best learning platform!</p>
+      </div>
+    </div>
+    <div class="cardReview">
+      <div class="card-image2">
+        <img src="assets/1.jpg" alt="Review Image" />
+      </div>
+      <div id="review">
+        <h3 style="color: #034866">Optimus Prime</h3>
+        <p>The best courses ever.</p>
+      </div>
+    </div>
+    <div class="cardReview">
+      <div class="card-image2">
+        <img src="assets/1.jpg" alt="Review Image" />
+      </div>
+      <div id="review">
+        <h3 style="color: #034866">Default skin</h3>
+        <p>
+          This is the best course site wow lets build together a
+          dasdsadasdsadasdasdsa
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter" style="background-color: #034866; height: 300px">
+  <div id="header-container">
+    <div id="headings">
+      <h1 id="showcase-heading2">SUBSCRIBE TO OUR NEWSLETTER</h1>
+    </div>
+  </div>
+  <div id="form-container">
+    <input type="text" id="email-input" placeholder="Enter Email..." />
+    <button id="subscribe-btn">Subscribe</button>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="heading">
+    <h2>LearnPulse<sup>™</sup></h2>
+  </div>
+  <div class="content">
+    <div class="services">
+      <h4>Services</h4>
+      <p><a href="#">Explore Free Courses</a></p>
+      <p><a href="#">Discover Premium Courses</a></p>
+      <p><a href="#">Browse All Courses</a></p>
+      <p><a href="#">Customize Learning Paths</a></p>
+    </div>
+    <div class="social-media">
+      <h4>Social</h4>
+      <p>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      </p>
+      <p>
+        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      </p>
+      <p>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      </p>
+    </div>
+    <div class="links">
+      <h4>Quick links</h4>
+      <p>
+        <a href="#"><i class="fas fa-angle-right"></i> Terms and Conditions</a>
+      </p>
+      <p>
+        <a href="#"><i class="fas fa-angle-right"></i> FAQ</a>
+      </p>
+      <p>
+        <a href="#"><i class="fas fa-angle-right"></i> Profile</a>
+      </p>
+    </div>
+    <div class="details">
+      <h4 class="address">Address</h4>
+      <p>
+        Constanta , Romania <br />
+        Bul Ferdinand 120 Bloc MTTC
+      </p>
+      <h4 class="mail">Email</h4>
+      <p><a href="#">8vOoA&#64;example.com</a></p>
+    </div>
+  </div>
+  <footer>
+    <hr />
+    © 2023 LearnPulse. All rights reserved.
+  </footer>
+</div>
+
+<script>
+  // Adaugă funcționalitatea pentru meniul burger
+  document.querySelector(".burger-menu").addEventListener("click", function () {
+    var navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active"); // Adaugă sau elimină clasa 'active'
+  });
+</script>

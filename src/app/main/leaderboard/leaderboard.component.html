@@ -1,0 +1,38 @@
+<div class="container-area">
+  <main>
+    <div id="header">
+      <h1>LeaderBoard</h1>
+      <h1 style="font-size: 14px">Your points: <span id="points">250</span></h1>
+    </div>
+    <div id="leaderboard">
+      <div class="ribbon"></div>
+      <table>
+        <tr *ngIf="users.length > 0">
+          <td class="number">1</td>
+          <td class="name">{{ users[0].fullName }}</td>
+          <td class="points">{{ users[0].pointsEarned }}</td>
+        </tr>
+        <tr *ngIf="users.length > 1">
+          <td class="number">2</td>
+          <td class="name">{{ users[1].fullName }}</td>
+          <td class="points">{{ users[1].pointsEarned }}</td>
+        </tr>
+        <tr *ngIf="users.length > 2">
+          <td class="number">3</td>
+          <td class="name">{{ users[2].fullName }}</td>
+          <td class="points">{{ users[2].pointsEarned }}</td>
+        </tr>
+        <tr *ngIf="users.length > 3">
+          <td class="number">4</td>
+          <td class="name">{{ users[3].fullName }}</td>
+          <td class="points">{{ users[3].pointsEarned }}</td>
+        </tr>
+        <tr *ngIf="users.length > 3">
+          <td class="number">5</td>
+          <td class="name">{{ users[4].fullName }}</td>
+          <td class="points">{{ users[4].pointsEarned }}</td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</div>

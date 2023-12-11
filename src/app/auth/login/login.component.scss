@@ -1,0 +1,142 @@
+.container-area {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background: url("/assets/office-supplies-white-desk-with-copy-space-writing-text.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  padding: 45px;
+  /* background: #262743;*/
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(15px);
+  box-sizing: border-box;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+#login:disabled,
+#login[disabled] {
+  background-color: rgb(147, 147, 147);
+  cursor: default;
+}
+
+#gender {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+
+.box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: center;
+  font-weight: normal;
+  color: black;
+}
+.box .inputBox {
+  position: relative;
+}
+.box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  font-size: 14px;
+  color: black;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+  top: -18px;
+  left: 0;
+  color: black;
+  font-size: 12px;
+}
+.box input[type="submit"] {
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  background: black;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-size: 13px;
+  float: right;
+  margin-top: 5px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #262743;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,35 @@
+.note p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.note span {
+  display: block;
+  font-size: 16px;
+  color: #575757;
+  margin-top: 5px;
+}
+
+.note .bottom-content {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.bottom-content span {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+.action-btn button {
+  border: none;
+  background-color: #034866;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
